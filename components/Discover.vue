@@ -21,8 +21,8 @@ const discoverTab = [
 <template>
   <div class="flex flex-col md:flex-row gap-8 items-start px-4 md:px-6 py-10 md:py-30 max-w-7xl mx-auto">
     <!-- Left Section -->
-    <div class="md:w-1/3">
-      <h2 class="text-2xl font-semibold mb-6">
+    <div class="w-full md:w-1/3">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-6">
         Discover a World of Events <br />
         Tailored Just for You.
       </h2>
@@ -35,13 +35,13 @@ const discoverTab = [
     </div>
 
     <!-- Right Section: Event Cards -->
-    <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div class="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div
         v-for="tab in discoverTab"
         :key="tab.id"
         class="relative rounded-lg overflow-hidden group cursor-pointer"
       >
-        <img :src="tab.imgurl" alt="" class="w-full h-48 sm:h-60 object-cover" />
+        <img :src="tab.imgurl" alt="" class="w-full h-40 sm:h-48 md:h-60 object-cover" />
 
         <!-- Overlay -->
         <div
@@ -50,7 +50,7 @@ const discoverTab = [
 
         <!-- Label -->
         <span
-          class="absolute inset-0 flex items-center justify-center text-white text-lg sm:text-xl font-medium z-10 text-center px-2"
+          class="absolute inset-0 flex items-center justify-center text-white text-base sm:text-lg md:text-xl font-medium z-10 text-center px-2"
         >
           {{ tab.label }}
         </span>
