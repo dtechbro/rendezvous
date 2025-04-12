@@ -23,7 +23,7 @@ const categories = [
 
       <div class="flex flex-col gap-6 md:flex-row md:items-end justify-between md:gap-10 mb-12">
         <!-- Text -->
-        <div class="text-white text-2xl sm:text-3xl md:text-4xl leading-snug md:w-[40%]">
+        <div class="text-white text-2xl font-gilroy font-medium sm:text-3xl md:text-4xl leading-snug md:w-[40%]">
           Ready to Rock? Discover the Hottest Events Here — Your Calendar's New Best Friend!
         </div>
 
