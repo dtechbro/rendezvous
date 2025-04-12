@@ -107,20 +107,27 @@ const generateIframeUrl = (lat: number, lng: number) => {
             </div>
 
             <div class="w-full">
-              <h2 class="font-medium my-6">Tickets Pricing</h2>
+  <h2 class="font-medium my-6">Tickets Pricing</h2>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
-                <span class="">
-                  <h2 class="text-xl font-medium">Single</h2>
-                  <p class="text-[#9B51E0] text-lg font-medium">NGN {{ event.price }}</p>
-                </span>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+    <!-- Single Ticket -->
+    <span>
+      <h2 class="text-xl font-medium">Single</h2>
+      <p class="text-[#9B51E0] text-lg font-medium">
+        {{ event.price === 0 ? 'Free' : `NGN ${event.price}` }}
+      </p>
+    </span>
 
-                <span class="">
-                  <h2 class="text-lg font-medium">Pairing</h2>
-                  <p class="text-[#9B51E0] text-lg font-medium">NGN {{ event.price }}</p>
-                </span>
-              </div>
-            </div>
+    <!-- Pairing Ticket -->
+    <span>
+      <h2 class="text-lg font-medium">Pairing</h2>
+      <p class="text-[#9B51E0] text-lg font-medium">
+        {{ event.price === 0 ? 'Free' : `NGN ${event.price}` }}
+      </p>
+    </span>
+  </div>
+</div>
+
 
             <nuxt-link to="#" class="px-6 py-3 mt-6 bg-[#783EAD] text-white rounded-lg block w-full sm:w-auto text-center hover:bg-[#9B51E0] transition-colors">Buy Now</nuxt-link>
 
